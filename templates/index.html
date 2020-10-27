@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Database</h4>
+    <form action="abc" method="POST">
+        {% csrf_token %}
+        <input type="submit">
+    </form>
+    {% for nam in result %}
+        <h3>{{nam.name}} {{nam.roll}}</h3>
+    {% endfor %}
+</body>
+</html>
