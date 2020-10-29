@@ -1,0 +1,17 @@
+version: "3"
+services:
+  ass1:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    ports:
+      - 1234:8000
+    depends_on: 
+      - db
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_DB=demo
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=admin
+    ports:
+      - 1235:5432

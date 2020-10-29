@@ -25,11 +25,10 @@ SECRET_KEY = '-th#(jkk(cajk+5+k6pb%nm%y8o&2ool10o&t&(*xg+w1l=0xh'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.99.100']
 
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -80,7 +79,8 @@ DATABASES = {
         'NAME': 'demo',
         'USER': 'postgres',
         'PASSWORD' : 'admin',
-        'HOST': 'localhost'
+        'HOST': 'db',
+        'PORT': 5432
     }
 }
 
